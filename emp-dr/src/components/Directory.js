@@ -17,3 +17,5 @@ class Directory extends Component { // directory component defubed as class
     </>
   }
 }
+
+export default Directory; 
