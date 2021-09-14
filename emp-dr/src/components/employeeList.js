@@ -11,9 +11,10 @@ function EmployeeList (props) {
                     <th scope = "col"> D.O.B. </th>
                 </tr>
             </thread>
+                <EmployeeList { ...props} />
         </table>
     )
-}
+};
 
 
 
