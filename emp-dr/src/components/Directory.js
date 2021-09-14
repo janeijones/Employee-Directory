@@ -7,7 +7,8 @@ import Search from "./userSearch.js"
 class Directory extends Component { // directory component defubed as class
     state = {
         search: "",
-        results: []
+        results: [],
+        resultsDisplay: []
 }; 
 
 componentDidMount(){
@@ -20,6 +21,11 @@ componentDidMount(){
 
 handleFormSubmit = (e) => {
     console.log(e.target.value + " - Handle Form Submit")
+
+    const search = e.target.value; 
+    const resultsDisplay = this.state.results.filter(result => {
+        
+    })
     
 } 
 
