@@ -8,6 +8,13 @@ class Directory extends Component { // directory component defubed as class
         results: []
 }; 
 
+componentDidMount(){
+    API.search()
+        .then(res => 
+            this.setState({results: res.data.results}))
+         .catch(err => console.log(err + "ComponentMount"))   
+        
+}
 
 
 
