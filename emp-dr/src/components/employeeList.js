@@ -6,9 +6,9 @@ function EmployeeList (props) {
             <thread>
                 <tr>
                     <th scope = "col"> Name </th>
-                    <th scope = "col"> D.O.B. </th>
                     <th scope = "col"> Phone Number </th>
                     <th scope = "col"> Email </th>
+                    <th scope = "col"> D.O.B. </th>
                 </tr>
             </thread>
         </table>
