@@ -1,4 +1,5 @@
 import React from 'react';
+import EmployeeInfo from './employeeInfo';
 
 function EmployeeList (props) {
     return (
@@ -11,7 +12,7 @@ function EmployeeList (props) {
                     <th scope = "col"> D.O.B. </th>
                 </tr>
             </thread>
-                <EmployeeList { ...props} />
+                <EmployeeInfo { ...props} />
         </table>
     )
 };
