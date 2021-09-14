@@ -24,10 +24,12 @@ handleFormSubmit = (e) => {
 
     const search = e.target.value; 
     const resultsDisplay = this.state.results.filter(result => {
-        
+        let info = Object.values(result).join('').toLowerCase();
+        return info.indexOf(search.toLowerCase()) !== -1;
+
     })
-    
-} 
+        this.setState({resultsDisplay: resultsDisplay})
+};
 
 
 
