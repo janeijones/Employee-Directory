@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import API from "../utils/API";
 import Header from "./Header"; 
+import EmployeeList from './employeeList';
+import Search from "./userSearch.js"
 
 class Directory extends Component { // directory component defubed as class
     state = {
@@ -26,6 +28,8 @@ handleFormSubmit = (e) => {
   render() {
     return <>
     <Header />
+    <Search /> 
+    <EmployeeList /> 
     </>
   }
 }

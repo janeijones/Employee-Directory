@@ -1,10 +1,10 @@
 import React from 'react';
 
-function userSearch() {
+function Search() {
     return (
         <form>
             <input 
-                value = {props.userSearch}
+                value = {props.Search}
                 onChange = {} //event here
                 placeholder = "Search"
                 />
@@ -13,4 +13,4 @@ function userSearch() {
     )
 }
 
-export default userSearch; 
+export default Search; 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function employeeList (props) {
+function EmployeeList (props) {
     return (
         <table className = "table mt-4 table-striped">
             <thread>
@@ -17,4 +17,4 @@ function employeeList (props) {
 
 
 
-export default employeeList; 
+export default EmployeeList; 
