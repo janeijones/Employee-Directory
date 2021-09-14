@@ -12,9 +12,14 @@ componentDidMount(){
     API.search()
         .then(res => 
             this.setState({results: res.data.results}))
-         .catch(err => console.log(err + "ComponentMount"))   
+         .catch(err => console.log(err + " - ComponentMount"))   
         
-}
+};
+
+handleFormSubmit = (e) => {
+    console.log(e.target.value + " - Handle Form Submit")
+    
+} 
 
 
 
