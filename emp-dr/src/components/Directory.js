@@ -31,6 +31,18 @@ handleFormSubmit = (e) => {
         this.setState({resultsDisplay: resultsDisplay})
 };
 
+handleInputChange = (e) => {
+    console.log(e.target + " - Handle Input Change")
+    console.log(e.target.name + " - name")
+    console.log(e.target.value + " - value")
+    const name = e.target.name
+    const value = e.target.value
+
+    this.setState({[name: value]})
+
+
+}
+
 
 
   render() {
