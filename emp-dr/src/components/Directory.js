@@ -42,6 +42,10 @@ handleInputChange = (e) => {
 
 };
 
+sortEmployees = () => {
+    //check if asc or des
+}
+
 
 
   render() {
