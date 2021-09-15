@@ -38,10 +38,9 @@ handleInputChange = (e) => {
     const name = e.target.name
     const value = e.target.value
 
-    this.setState({[name: value]})
+    this.setState({[name]: value});
 
-
-}
+};
 
 
 
