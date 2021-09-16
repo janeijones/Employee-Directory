@@ -44,6 +44,15 @@ handleInputChange = (e) => {
 
 sortEmployees = () => {
     //check if asc or des
+    if (this.state.order === 'ascend') {
+        console.log(this.state.order + " - should be asc")
+        //set to des
+    } else {
+        console.log(this.state.order + " - should be dec")
+        //set to asc
+    }
+    
+
 }
 
 
