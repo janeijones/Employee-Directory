@@ -57,7 +57,12 @@ sortEmployees = () => {
 
     if (this.state.order === 'ascend') {
         const sortEmp = this.state.results.sort((a,b) => {
-            return (a.name.last < b.name.last) ? -1 : 1
+            return (a.name.last < b.name.last) ? -1 : 1 // return employees using asc  
+        })
+        this.setState({results: sortEmp})
+    } else {
+        const sortEmp = this.state.results.sort((a,b) => {
+            return (b.name.last < a.name.last) ? -1 : 1 // return employees using dec
         })
         this.setState({results: sortEmp})
     }
