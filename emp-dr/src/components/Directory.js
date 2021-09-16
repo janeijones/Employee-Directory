@@ -8,13 +8,14 @@ class Directory extends Component { // directory component defubed as class
     state = {
         search: "",
         results: [],
-        resultsDisplay: []
+        resultsDisplay: [],
+        order: "ascend"
 }; 
 
 componentDidMount(){
     API.search()
         .then(res => 
-            this.setState({results: res.data.results}))
+            this.setState({results: res.data.results, resultsDisplay: res.data.results}))
          .catch(err => console.log(err + " - ComponentMount"))   
         
 };
