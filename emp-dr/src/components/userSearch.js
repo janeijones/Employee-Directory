@@ -2,11 +2,11 @@ import React from 'react';
 
 function Search() {
     return (
-        <form>
+        <form className = "justify-content-start d-flex form-inline">
             <input 
-                className = "justify-content-center d-flex form-inline"
+                className = "form-control mr-sm-2"
                 value = {props.Search}
-                onChange = {e => props.handleFormSubmit(e)} //event here
+                onChange = {e => props.handleFormSubmit(e)}
                 placeholder = "Search"
                 />
 
