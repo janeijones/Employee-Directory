@@ -47,11 +47,20 @@ sortEmployees = () => {
     if (this.state.order === 'ascend') {
         console.log(this.state.order + " - should be asc")
         //set to des
+        this.setState({order: 'descend'})
     } else {
         console.log(this.state.order + " - should be dec")
         //set to asc
+        this.setState({order: 'descend'})
     }
-    
+    console.log(this.state.order + " - state changed to")
+
+    if (this.state.order === 'ascend') {
+        const sortEmp = this.state.results.sort((a,b) => {
+            return (a.name.last < b.name.last) ? -1 : 1
+        })
+        this.setState({results: sortEmp})
+    }
 
 }
 
