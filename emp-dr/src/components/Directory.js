@@ -67,15 +67,15 @@ sortEmployees = () => {
         this.setState({results: sortEmp})
     }
 
-}
+};
 
 
 
   render() {
     return <>
     <Header />
-    <Search /> 
-    <EmployeeList /> 
+    <Search handleFormSubmit = {this.handleFormSubmit} /> 
+    <EmployeeList resultsFilter = {this.state.resultsDisplay}/> 
     </>
   }
 }
