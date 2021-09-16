@@ -25,8 +25,8 @@ handleFormSubmit = (e) => {
 
     const search = e.target.value; 
     const resultsDisplay = this.state.results.filter(result => {
-        let info = Object.values(result).join('').toLowerCase();
-        return info.indexOf(search.toLowerCase()) !== -1;
+        let data = Object.values(result).join('').toLowerCase();
+        return data.indexOf(search.toLowerCase()) !== -1;
 
     })
         this.setState({resultsDisplay: resultsDisplay})
@@ -76,7 +76,7 @@ sortEmployees = () => {
     return <>
     <Header />
     <Search handleFormSubmit = {this.handleFormSubmit} /> 
-    <EmployeeList resultsFilter = {this.state.resultsDisplay}/> 
+    <EmployeeList resultsDisplay = {this.state.resultsDisplay} handleSort={this.handleSort} /> 
     </>
   }
 }
