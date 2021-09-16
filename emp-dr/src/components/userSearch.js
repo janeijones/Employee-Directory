@@ -8,6 +8,7 @@ function Search(props) {
                 value = {props.Search}
                 onChange = {e => props.handleFormSubmit(e)}
                 placeholder = "Search"
+                name = "search"
                 />
 
         </form>
