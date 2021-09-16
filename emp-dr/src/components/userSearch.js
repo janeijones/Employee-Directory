@@ -4,8 +4,9 @@ function Search() {
     return (
         <form>
             <input 
+                className = "justify-content-center d-flex form-inline"
                 value = {props.Search}
-                onChange = {} //event here
+                onChange = {e => props.handleFormSubmit(e)} //event here
                 placeholder = "Search"
                 />
 
