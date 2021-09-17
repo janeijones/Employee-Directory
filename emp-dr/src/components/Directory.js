@@ -21,7 +21,7 @@ componentDidMount(){
 };
 
 handleFormSubmit = (e) => {
-    console.log(e.target.value + " - Handle Form Submit")
+    // console.log(e.target.value + " - Handle Form Submit")
 
     const search = e.target.value; 
     const resultsDisplay = this.state.results.filter(result => {
@@ -33,9 +33,9 @@ handleFormSubmit = (e) => {
 };
 
 handleInputChange = (e) => {
-    console.log(e.target + " - Handle Input Change")
-    console.log(e.target.name + " - name")
-    console.log(e.target.value + " - value")
+    // console.log(e.target + " - Handle Input Change")
+    // console.log(e.target.name + " - name")
+    // console.log(e.target.value + " - value")
     const name = e.target.name
     const value = e.target.value
 
@@ -46,15 +46,15 @@ handleInputChange = (e) => {
 sortEmployees = () => {
     //check if asc or des
     if (this.state.order === 'ascend') {
-        console.log(this.state.order + " - should be asc")
+        // console.log(this.state.order + " - should be asc")
         //set to des
         this.setState({order: 'descend'})
     } else {
-        console.log(this.state.order + " - should be dec")
+        // console.log(this.state.order + " - should be dec")
         //set to asc
-        this.setState({order: 'descend'})
+        this.setState({order: 'ascend'})
     }
-    console.log(this.state.order + " - state changed to")
+    // console.log(this.state.order + " - state changed to")
 
     if (this.state.order === 'ascend') {
         const sortEmp = this.state.results.sort((a,b) => {
@@ -76,7 +76,7 @@ sortEmployees = () => {
     return <>
     <Header />
     <Search handleFormSubmit = {this.handleFormSubmit} /> 
-    <EmployeeList resultsDisplay = {this.state.resultsDisplay} handleSort={this.handleSort} /> 
+    <EmployeeList resultsDisplay = {this.state.resultsDisplay} sortEmployees={this.sortEmployees} /> 
     </>
   }
 }
